@@ -31,7 +31,7 @@ VITE_GITHUB_API_TOKEN="your_github_token_here"
 # Get from: https://console.cloud.google.com
 VITE_GOOGLE_API_KEY=YOUR_ACTUAL_GOOGLE_API_KEY_HERE
 EOF
-```
+``` 
 
 **Or edit the file manually:**
 ```env
