@@ -1,7 +1,5 @@
 # 🚀 Quick Start Guide
 
-## Fix the "API error: 404 Not Found" Error
-
 ### ✅ Step 1: Get Your Google API Key
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com)
