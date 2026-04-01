@@ -1,0 +1,173 @@
+/* Tree Diagram Styles */
+.tree-diagram-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Monaco", "Courier New", monospace;
+  overflow-x: auto;
+}
+
+.tree-title {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.tree-wrapper {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e0e6ed;
+}
+
+.tree-node {
+  margin: 4px 0;
+}
+
+.tree-node-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tree-node-content:hover {
+  background-color: #ecf0f1;
+}
+
+.tree-toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #34495e;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.tree-toggle:hover {
+  transform: scale(1.2);
+}
+
+.tree-toggle-placeholder {
+  width: 20px;
+  display: inline-block;
+}
+
+.tree-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.tree-icon.file {
+  color: #3498db;
+}
+
+.tree-icon.folder {
+  color: #f39c12;
+}
+
+.tree-label {
+  font-weight: 500;
+  color: #2c3e50;
+  flex: 1;
+}
+
+.tree-label.file-label {
+  color: #34495e;
+}
+
+.tree-label.folder-label {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.tree-size {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-left: 8px;
+}
+
+.tree-language {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.tree-children {
+  margin-left: 0;
+}
+
+/* Scrollbar styling for tree wrapper */
+.tree-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tree-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tree-wrapper::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 4px;
+}
+
+.tree-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
+}
+
+/* Animation for tree expansion */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tree-children {
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tree-diagram-container {
+    padding: 15px;
+  }
+
+  .tree-wrapper {
+    max-height: 400px;
+  }
+
+  .tree-node-content {
+    font-size: 13px;
+  }
+
+  .tree-language {
+    display: none;
+  }
+}
